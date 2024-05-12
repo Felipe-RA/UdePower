@@ -1,0 +1,8 @@
+/build
+/headers
+/nvml_header_gpu_power.c
+/nvml_header_gpu_power.pyx
+/nvml_setup.py
+/nvml_test.py
+/rocm_setup.py
+/rocm_smi_gpu_power.pyx
