@@ -1,3 +1,9 @@
+import csv
+import datetime
+from device_catcher import gather_device_data
+from run_pcm import gather_pcm_data
+from powertop_hci_extractor import gather_powertop_data
+
 data_elements = [
     "device_address",  # Bluetooth address of each discovered device
     "device_name",  # Name of the Bluetooth device
@@ -33,8 +39,37 @@ data_elements = [
     "cpu_temperature",  # Temperature of the CPU
     "cpu_power_limit",  # Power limit for the CPU
     "cpu_utilization_avg",  # CPU utilization percentage avgd over all cores
+    "cpu_undervolt_offset",  # CPU undervolt offset from the default policy voltage
+    "gpu_undervolt_offset",  # GPU undervolt offset from the default policy voltage
     "ram_voltage",  # Voltage of the RAM (mV)
     "ram_frequency",  # Frequency of the RAM (mhz)
     "ram_utilization",  # RAM utilization percentage
     "ram_cas_latency_cl",  # RAM CAS latency with its cl rating
 ]
+
+
+
+def collect_and_record_data():
+    """
+    Collects data from various modules and records it into a CSV file.
+    """
+    # Prepare the data dictionary from all sources
+    data = {}
+    data.update(gather_device_data())
+    data.update(gather_pcm_data())
+    data.update(gather_powertop_data())
+
+    # Open or create the CSV file and write the data
+    with open('laptop_stats.csv', mode='a', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=data_elements)
+        
+        # Check if the file is empty and write headers if so
+        file.seek(0)
+        if not file.read(1):
+            writer.writeheader()
+        
+        # Write the data
+        writer.writerow({key: data.get(key, '') for key in data_elements})
+
+if __name__ == '__main__':
+    collect_and_record_data()
