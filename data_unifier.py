@@ -9,7 +9,7 @@ data_elements = [
     "device_name",  # Name of the Bluetooth device
     "signal_strength",  # RSSI value indicating the signal strength of the connection
     "tx_power",  # Transmission power level
-    "device_power_usage",  # Power usage of each detected device
+    "device_power_usage",  # Power usage of each detected device within the system
     "cpu_power_state",  # Power states of the CPU, including active and idle times
     "gpu_power_usage",  # Power usage of the GPU
     "display_backlight_power",  # Power consumption by the display backlight
