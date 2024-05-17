@@ -1,0 +1,38 @@
+{
+    "best_hyperparams": {
+        "colsample_bytree": 0.5,
+        "learning_rate": 0.16,
+        "max_depth": 10,
+        "n_estimators": 450,
+        "subsample": 0.9
+    },
+    "best_weights": [
+        0.1,
+        0.05,
+        0.05,
+        0.05
+    ],
+    "combined_loss": 1.9633803714860694,
+    "metrics": {
+        "estimated_power_savings (W)": {
+            "RMSE": 1.1757981254897374,
+            "MAE": 1.0120832311626229
+        },
+        "average_cpu_frequency (GHz)": {
+            "RMSE": 1.4890568907915904,
+            "MAE": 1.1007076251925738
+        },
+        "gpu_core_clock (GHz)": {
+            "RMSE": 1.0523211923423226,
+            "MAE": 0.9474881643006415
+        },
+        "gpu_memory_clock (GHz)": {
+            "RMSE": 1.6084143674236246,
+            "MAE": 1.2600520687052403
+        },
+        "display_backlight_power (W)": {
+            "RMSE": 1.8677861961162574,
+            "MAE": 1.5772062963210773
+        }
+    }
+}

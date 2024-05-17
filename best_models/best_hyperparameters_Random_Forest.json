@@ -1,0 +1,12 @@
+{
+    "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "n_estimators": 500
+    },
+    "metrics": {
+        "RMSE": 0.1795114332390993,
+        "MAE": 0.2612230291470997
+    }
+}
