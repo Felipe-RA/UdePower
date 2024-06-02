@@ -112,3 +112,4 @@ cmake --build .
 cmake --build . --parallel
 ```
 
+Now, you can run the `run.py` to start to gather the data
