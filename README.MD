@@ -12,7 +12,7 @@
 
 ## Take a Look at Our Notebooks
 
-Before you start, please give yourself a moment to look at the NOTEBOOKS explaining the training process of the model. You can find them at the `NOTEBOOK` folder.
+Before you start, please give yourself a moment to look at the NOTEBOOKS explaining the training process of the model. You can find them at the `NOTEBOOKS` folder.
 
 ## Installation and Setup of Binaries
 
