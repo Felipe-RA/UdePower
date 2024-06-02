@@ -1,5 +1,15 @@
 # Installation and Setup of Binaries
 
+
+## Python
+
+1. Install python dependencies with pip
+
+```bash
+pip install -r requirements. txt
+```
+
+
 ## NVIDIA tools (Maxwell and Higher)
 
 **1. Install de nvidia utils.**
